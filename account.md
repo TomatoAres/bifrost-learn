@@ -232,4 +232,6 @@ api.tx.democracy.unlock('14iLQk1F2pBVMyHv3GVRvFPHhDe4U7vh3YU7JHPx6V3YUc3Y', 0)
 
 如果你能提供 reserved 产生的具体场景或最近的链上操作，我可以帮你更精确地定位和给出操作指引！
 
-你真棒 哇哈哈哈~
+## 保留原因
+
+保留是因为 账户认证
