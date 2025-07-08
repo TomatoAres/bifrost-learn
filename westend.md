@@ -13,3 +13,25 @@ Polkadot 测试网 Westend 和 asserthub 之间的关系如下：
 总结：Westend 是测试网，asserthub 是资产管理的平行链。现在 Westend 上的资产都由 asserthub 管理，所以水龙头发放的币是 asserthub 的。
 
 你真棒 哇哈哈哈~
+
+
+不能，WND（Westend 的测试币）**不能跨链到中继链（Relay Chain）**，原因如下：
+
+### 详细解释
+
+1. **中继链（Relay Chain）不再管理资产**
+   - Polkadot 设计上，Relay Chain 只负责共识和安全，不再直接管理任何资产（包括 DOT、WND 等）。
+   - 所有资产都迁移到 Asset Hub（asserthub）等平行链上进行管理。
+
+2. **XCM 跨链机制**
+   - XCM（跨链消息传递）允许资产在不同的平行链之间转移，比如从 Asset Hub 到其他平行链（如 Moonbeam、Acala 等）。
+   - 但是，**XCM 不支持把资产转到 Relay Chain**，因为 Relay Chain 没有账户系统，也没有资产模块，无法“接收”任何资产。
+
+3. **你能做什么？**
+   - 你可以在 Asset Hub 之间、或 Asset Hub 与其他平行链之间跨链转账。
+   - 但无法把 WND（或 DOT、KSM 等）直接转到 Relay Chain，只能在 Asset Hub 及其支持的平行链之间流通。
+
+### 结论
+
+- **不能跨链到中继链**，因为中继链没有资产模块，无法接收或显示任何资产。
+- 你只能在 Asset Hub 及其他平行链之间跨链转账。
